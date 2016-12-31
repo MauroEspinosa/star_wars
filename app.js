@@ -1,7 +1,7 @@
 ﻿var express=require("express");
 var app=express();
-var funciones=require("./routes/index");
 var path = require('path');
+var funciones=require(path.join(process.cwd()+"/routes/index"));
 
 app.set('views', path.join(process.cwd() +'/views'));
 app.use(express.static(path.join(process.cwd() + '/public')));
