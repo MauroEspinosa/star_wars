@@ -3,8 +3,8 @@ var app=express();
 var funciones=require("./routes/index");
 var path = require('path');
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.set('views',path.join(__dirname, 'views'));
+app.set('views', path.join(process.cwd() +'/views'));
+app.use(express.static(path.join(process.cwd() + '/public')));
 app.set("view engine", "ejs");
 
 app.get("/", funciones.home);
